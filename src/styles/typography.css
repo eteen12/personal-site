@@ -18,7 +18,6 @@
     margin-top: theme(spacing.6);
     margin-bottom: theme(spacing.6);
   }
-
   /* Headings */
   :where(h2) {
     font-weight: theme(fontWeight.semibold);
