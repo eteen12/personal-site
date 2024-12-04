@@ -8,54 +8,73 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
+import ThisImage from '@/components/reusables/image'
 
-const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+import NextJS from '/public/skillLogo/nextLogo.webp'
+import JSlogo from '/public/skillLogo/JsLogo.webp'
+import TWlogo from '/public/skillLogo/tailwindLogo.webp'
+import { Button } from '@/components/Button'
+
+const skills = [
+  {
+    theSkill: 'NextJS',
+    image: NextJS,
+    description: 'asdasd asd asjdb adb iaidb aidb iabdi abidb ai',
+  },
+  {
+    theSkill: 'Tailwind CSS',
+    image: TWlogo,
+    description: 'asdasd asd asjdb adb iaidb aidb iabdi abidb ai',
+  },
+  {
+    theSkill: 'Javascript',
+    image: JSlogo,
+    description: 'asdasd asd asjdb adb iaidb aidb iabdi abidb ai',
+  },
 ]
 
 function Clients() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
-      <Container>
+      <div className="mx-auto max-w-[1800px] px-6">
         <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
-          </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
+          <div>
+            <h2 className="text-left font-display text-5xl tracking-tight text-white sm:text-left lg:text-7xl">
+              Want to work together?
+            </h2>
+            <h2 className="text-left font-display text-5xl tracking-tight text-white sm:text-left lg:text-7xl">
+              Contact me today.
+            </h2>
+            <Button
+              href="/"
+              invert={true}
+              className={'mt-5 border-4 hover:border-white'}
+              inactiveBg={''}
+              inactiveText={'text-white'}
+              activeBg={'bg-white'}
+              activeText={'text-black'}
+            >
+              Contact
+            </Button>
+          </div>
+          {/* <div className="h-px flex-auto bg-neutral-800" /> */}
         </FadeIn>
         <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
-                <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
+          <FadeIn>
+            {/* <div className="relative h-[500px] w-[50%] rounded-4xl px-6 py-4">
+              <Image
+                src={'/cta/mockup.png'}
+                alt="macbook with a mockup of a plumbing website"
+                className="object-cover"
+                priority
+                fill
+              />
+            </div> */}
+          </FadeIn>
         </FadeInStagger>
-      </Container>
+      </div>
     </div>
   )
 }
@@ -64,14 +83,10 @@ function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="Check out some of my projects"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
-        <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
-        </p>
+        <p>Click a card to see each individual project</p>
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -180,12 +195,13 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Hi, I&apos;m Ethan Breitkreutz – A Web Developer, and Student
+            Custom web design and development in Kelowna
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            I specialize in creating responsive and fast, user-friendly websites
-            using modern technologies like Next.js and Tailwind CSS. All my code
-            is written from the ground up, without any site builders.
+            Custom coded websites ensuring responsive, user friendly websites
+            tailored to your business. Whether you&apos;re looking for a new
+            site or need to update an existing one, I provide custom web design
+            and development services that help you stand out online.
           </p>
         </FadeIn>
       </Container>
@@ -193,15 +209,6 @@ export default async function Home() {
       <Clients />
 
       <CaseStudies caseStudies={caseStudies} />
-
-      <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
-      >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
-      </Testimonial>
 
       <Services />
 
