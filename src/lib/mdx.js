@@ -24,5 +24,5 @@ export function loadArticles() {
 }
 
 export function loadCaseStudies() {
-  return loadEntries('work', 'caseStudy')
+  return loadEntries('portfolio', 'caseStudy')
 }

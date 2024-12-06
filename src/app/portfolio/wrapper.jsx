@@ -49,13 +49,14 @@ export default async function CaseStudyLayout({ caseStudy, children }) {
 
             <div className="border-y border-neutral-200 bg-neutral-100">
               <div className="-my-px mx-auto max-w-[76rem] bg-neutral-200">
-                <GrayscaleTransitionImage
-                  {...caseStudy.image}
-                  quality={90}
-                  className="w-full"
-                  sizes="(min-width: 1216px) 76rem, 100vw"
-                  priority
-                />
+                <iframe
+                  src={caseStudy.site}
+                  width="100%"
+                  height="800px"
+                  frameborder="0"
+                >
+                  Your browser does not support iframes.
+                </iframe>
               </div>
             </div>
           </FadeIn>

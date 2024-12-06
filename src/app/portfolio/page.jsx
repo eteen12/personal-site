@@ -103,9 +103,9 @@ const clients = [
 ]
 
 export const metadata = {
-  title: 'Our Work',
+  title: 'Ethan Breitkreutz Portfolio',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'Discover Ethan Breitkreutz’s portfolio showcasing web design and development expertise with Next.js, Tailwind CSS, and custom websites for businesses. Crafting professional, user-friendly websites that drive success.',
 }
 
 export default async function Work() {
