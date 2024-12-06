@@ -17,7 +17,7 @@ export default async function CaseStudyLayout({ caseStudy, children }) {
     <>
       <article className="mt-24 sm:mt-32 lg:mt-40">
         <header>
-          <PageIntro eyebrow="Case Study" title={caseStudy.title} centered>
+          <PageIntro eyebrow="Project" title={caseStudy.title} centered>
             <p>{caseStudy.description}</p>
           </PageIntro>
 

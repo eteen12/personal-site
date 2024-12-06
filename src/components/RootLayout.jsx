@@ -128,7 +128,7 @@ function Navigation() {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/portfolio">My Portfolio</NavigationItem>
-        <NavigationItem href="/process">Contact</NavigationItem>
+        <NavigationItem href="/contact">Contact</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/about">About Me</NavigationItem>

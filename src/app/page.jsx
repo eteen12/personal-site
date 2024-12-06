@@ -47,7 +47,7 @@ function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title="Take a look at some of my projects"
+        title="Take a look at my portfolio"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>Click a card to see each individual project</p>
@@ -78,7 +78,7 @@ function CaseStudies({ caseStudies }) {
                   <span className="text-neutral-300" aria-hidden="true">
                     /
                   </span>
-                  <span>Case study</span>
+                  <span>Project</span>
                 </p>
                 <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                   {caseStudy.title}
