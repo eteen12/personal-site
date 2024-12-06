@@ -37,7 +37,6 @@ function Clients() {
             </Button>
           </div>
         </FadeIn>
-       
       </div>
     </div>
   )
@@ -100,12 +99,12 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        title="Creating websites for businesses across Canada"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          Have an outdated website? Or even no website at all? No worries, I do
+          it all.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -121,23 +120,24 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+              I specialize in front-end web development, using modern
+              technologies like Next.js to create fast, responsive, and visually
+              appealing websites.
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Web design">
+              I create visually appealing sites by using Tailwind CSS to create
+              responsive and great looking sites. I also use GIMP to photoshop
+              images.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="Website redesign">
+              Already have existing content? No worries, I can redesign and
+              revamp your site to ensure your digital presence looks
+              professional.
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Search engine optimization">
+              If your business is struggling in search results, I can help you
+              out. I use schema markups, and google recommended best practices
+              to recieve great ranking sites.
             </ListItem>
           </List>
         </div>
