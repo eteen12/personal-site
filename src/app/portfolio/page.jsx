@@ -114,13 +114,14 @@ export default async function Work() {
   return (
     <>
       <PageIntro
-        eyebrow="Our work"
-        title="Proven solutions for real-world problems."
+        eyebrow="My Portfolio"
+        title="Proven solutions for plumbers in Canada"
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          I’m a web developer focused on creating user-friendly, fast, and
+          responsive websites. I work with plumbing businesses across Canada to
+          develop tailored solutions that suit the unique needs of your
+          business.
         </p>
       </PageIntro>
 

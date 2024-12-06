@@ -58,6 +58,9 @@ export default async function CaseStudyLayout({ caseStudy, children }) {
                   Your browser does not support iframes.
                 </iframe>
               </div>
+              <p className="-my-px mx-auto max-w-[76rem]">
+                (Page load times may be slower due to embedding another website.)
+              </p>
             </div>
           </FadeIn>
         </header>
