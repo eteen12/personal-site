@@ -13,7 +13,7 @@ export function Button({
 }) {
   className = clsx(
     className,
-    'inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition-colors ease-in-out duration-300',
+    'inline-flex rounded-full px-4 py-1.5 text-base  font-semibold transition-colors ease-in-out duration-300 px-8 border-2',
     invert
       ? `${inactiveBg} ${inactiveText} hover:${activeBg} hover:${activeText}`
       : `${activeBg} ${activeText} hover:${activeBg} hover:${activeText}`,

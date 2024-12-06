@@ -7,50 +7,27 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
-import { Testimonial } from '@/components/Testimonial'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
-import ThisImage from '@/components/reusables/image'
 
-import NextJS from '/public/skillLogo/nextLogo.webp'
-import JSlogo from '/public/skillLogo/JsLogo.webp'
-import TWlogo from '/public/skillLogo/tailwindLogo.webp'
 import { Button } from '@/components/Button'
-
-const skills = [
-  {
-    theSkill: 'NextJS',
-    image: NextJS,
-    description: 'asdasd asd asjdb adb iaidb aidb iabdi abidb ai',
-  },
-  {
-    theSkill: 'Tailwind CSS',
-    image: TWlogo,
-    description: 'asdasd asd asjdb adb iaidb aidb iabdi abidb ai',
-  },
-  {
-    theSkill: 'Javascript',
-    image: JSlogo,
-    description: 'asdasd asd asjdb adb iaidb aidb iabdi abidb ai',
-  },
-]
 
 function Clients() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
-      <div className="mx-auto max-w-[1800px] px-6">
+      <div className="mx-auto max-w-7xl px-6">
         <FadeIn className="flex items-center gap-x-8">
-          <div>
-            <h2 className="text-left font-display text-5xl tracking-tight text-white sm:text-left lg:text-7xl">
+          <div className="w-full">
+            <h2 className="font-display text-5xl tracking-tight text-white lg:text-7xl">
               Want to work together?
             </h2>
-            <h2 className="text-left font-display text-5xl tracking-tight text-white sm:text-left lg:text-7xl">
-              Contact me today.
+            <h2 className="font-display text-5xl tracking-tight text-white lg:text-7xl">
+              Contact me today
             </h2>
             <Button
               href="/"
               invert={true}
-              className={'mt-5 border-4 hover:border-white'}
+              className={'mt-5 hover:border-white'}
               inactiveBg={''}
               inactiveText={'text-white'}
               activeBg={'bg-white'}
@@ -59,21 +36,8 @@ function Clients() {
               Contact
             </Button>
           </div>
-          {/* <div className="h-px flex-auto bg-neutral-800" /> */}
         </FadeIn>
-        <FadeInStagger faster>
-          <FadeIn>
-            {/* <div className="relative h-[500px] w-[50%] rounded-4xl px-6 py-4">
-              <Image
-                src={'/cta/mockup.png'}
-                alt="macbook with a mockup of a plumbing website"
-                className="object-cover"
-                priority
-                fill
-              />
-            </div> */}
-          </FadeIn>
-        </FadeInStagger>
+       
       </div>
     </div>
   )
@@ -83,7 +47,7 @@ function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title="Check out some of my projects"
+        title="Take a look at some of my projects"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>Click a card to see each individual project</p>
