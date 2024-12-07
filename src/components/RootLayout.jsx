@@ -59,11 +59,6 @@ function Header({
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Logomark
-            className="h-8 sm:hidden"
-            invert={invert}
-            filled={logoHovered}
-          />
           <Logo
             className="hidden h-8 sm:block"
             invert={invert}
@@ -71,9 +66,18 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button link="/contact">Contact me</Button>
+          <Button
+            href={'/contact'}
+            invert={true}
+            className={'border border-black'}
+            inactiveBg={'bg-white'}
+            inactiveText={'text-black'}
+            activeBg={'bg-black'}
+            activeText={'text-white'}
+          >
+            Contact me
+          </Button>
           <button
-            ref={toggleRef}
             type="button"
             onClick={onToggle}
             aria-expanded={expanded ? 'true' : 'false'}
