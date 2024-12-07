@@ -9,9 +9,15 @@ const navigation = [
   {
     title: 'portfolio',
     links: [
-      { title: 'FamilyFund', href: '/portfolio/family-fund' },
-      { title: 'Unseal', href: '/portfolio/unseal' },
-      { title: 'Phobia', href: '/portfolio/phobia' },
+      { title: 'Minimalist site', href: '/portfolio/minimalist-plumbing-site' },
+      {
+        title: 'Design site',
+        href: '/portfolio/design-oriented-plumbing-site',
+      },
+      {
+        title: 'Professional site',
+        href: '/portfolio/professional-plumbing-site',
+      },
       {
         title: (
           <>
@@ -25,10 +31,10 @@ const navigation = [
   {
     title: 'Company',
     links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'About me', href: '/about' },
+      { title: 'My portfolio', href: '/portfolio' },
+      { title: 'Contact', href: '/contact' },
+      { title: 'Home', href: '/home' },
     ],
   },
   {
@@ -85,8 +91,7 @@ function NewsletterForm() {
         Sign up for our newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+       Or dont.
       </p>
       <div className="relative mt-6">
         <input
@@ -125,7 +130,7 @@ export function Footer() {
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © Ethan Breitkreutz {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>
