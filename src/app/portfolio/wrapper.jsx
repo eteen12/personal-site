@@ -75,7 +75,7 @@ export default async function CaseStudyLayout({ caseStudy, children }) {
       {moreCaseStudies.length > 0 && (
         <PageLinks
           className="mt-24 sm:mt-32 lg:mt-40"
-          title="More case studies"
+          title="More projects"
           pages={moreCaseStudies}
         />
       )}

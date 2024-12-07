@@ -67,8 +67,16 @@ function ContactForm() {
           <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
           <TextInput label="Message" name="message" />
         </div>
-        <Button type="submit" className="mt-10">
-          Let’s work together
+        <Button
+          type="submit"
+          invert={true}
+          className={'mt-10 border border-black'}
+          inactiveBg={'bg-white'}
+          inactiveText={'text-black'}
+          activeBg={'bg-black'}
+          activeText={'text-white'}
+        >
+          Submit
         </Button>
       </form>
     </FadeIn>

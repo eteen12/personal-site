@@ -8,7 +8,6 @@ import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
-import { Testimonial } from '@/components/Testimonial'
 
 import { formatDate } from '@/lib/formatDate'
 import { loadCaseStudies } from '@/lib/mdx'
@@ -61,6 +60,12 @@ function CaseStudies({ caseStudies }) {
                   <div className="mt-8 flex">
                     <Button
                       href={caseStudy.href}
+                      invert={true}
+                      className={'mt-5 border border-black'}
+                      inactiveBg={'bg-white'}
+                      inactiveText={'text-black'}
+                      activeBg={'bg-black'}
+                      activeText={'text-white'}
                       aria-label={`Read case study: ${caseStudy.client}`}
                     >
                       See project
@@ -83,8 +88,6 @@ function CaseStudies({ caseStudies }) {
     </Container>
   )
 }
-
-
 
 export const metadata = {
   title: 'Ethan Breitkreutz Portfolio',
@@ -110,8 +113,6 @@ export default async function Work() {
       </PageIntro>
 
       <CaseStudies caseStudies={caseStudies} />
-
-     
 
       <ContactSection />
     </>
