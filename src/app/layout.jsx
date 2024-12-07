@@ -5,8 +5,9 @@ import '@/styles/tailwind.css'
 export const metadata = {
   title: {
     template: '%s | EthanBDev',
-    default: 'Studio - Award winning developer studio based in Denmark',
+    default: 'Website design in Kelowna | EthanBDev',
   },
+  
 }
 
 export default function Layout({ children }) {

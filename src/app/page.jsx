@@ -27,7 +27,9 @@ function Clients() {
             <Button
               href="/contact"
               invert={true}
-              className={'mt-5 border border-white hover:bg-white hover:text-black'}
+              className={
+                'mt-5 border border-white hover:bg-white hover:text-black'
+              }
               inactiveBg={''}
               inactiveText={'text-white'}
               activeBg={'bg-white'}
@@ -147,8 +149,53 @@ function Services() {
 }
 
 export const metadata = {
-  description:
-    'We are a development studio working at the intersection of design and technology.',
+  keywords:
+    'web development, web design, Kelowna, British Columbia, Canada, responsive, SEO, affordable, custom, small business',
+  author: 'Ethan Breitkreutz',
+  metadataBase: new URL('https://ethanbdev.com'),
+  og: {
+    title: 'EthanBDev',
+    description:
+      'Website design and development services for Kelowna businesses. Affordable, custom, responsive, and SEO-friendly websites.',
+    url: 'https://www.stoicquotes.ca',
+    image: 'https://www.stoicquotes.ca/about/ethan2.webp',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EthanBDev',
+    description:
+      'Website design and development services for Kelowna businesses. Affordable, custom, responsive, and SEO-friendly websites.',
+    image: 'https://www.stoicquotes.ca/about/ethan2.webp',
+  },
+  schema: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'person',
+      name: 'Ethan Breitkreutz',
+      url: 'https://EthanBDev.com',
+      image: 'https://www.stoicquotes.ca/about/ethan2.webp',
+      sameAs: [
+        'https://www.instagram.com/ethan_breitkreutz/',
+        'https://www.linkedin.com/in/ethan-breitkreutz/',
+        'https://www.youtube.com/@Ethan-Breitkreutz',
+        'https://x.com/12Eteen',
+        'https://github.com/eteen12',
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: 'ethan@ethanbdev.com',
+        contactType: 'Customer Service',
+        areaServed: 'CA',
+        availableLanguage: 'English',
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://EthanBDev.com/search?q={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ],
 }
 
 export default async function Home() {
