@@ -13,18 +13,33 @@ export function ContactSection() {
               Want to work together?
             </h2>
             <div className="mt-6 flex">
-              <Button href="/contact" invert>
+              <Button
+                href="/contact"
+                invert={true}
+                className={
+                  'mt-5 border border-white hover:bg-white hover:text-black'
+                }
+                inactiveBg={''}
+                inactiveText={'text-white'}
+                activeBg={'bg-white'}
+                activeText={'text-black'}
+              >
                 Contact
               </Button>
             </div>
             <div className="mt-10 border-t border-white/10 pt-10">
               <h3 className="font-display text-base font-semibold text-white">
-                Location
+                Dont want to click?
               </h3>
-              <Offices
-                invert
-                className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
-              />
+              <p className="text-white">
+                <strong>Contact Me:</strong>{' '}
+                <a
+                  href="mailto:ethan@ethanbdev.com"
+                  className="text-white hover:underline"
+                >
+                  ethan@ethanbdev.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

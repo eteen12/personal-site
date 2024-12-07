@@ -25,9 +25,9 @@ function Clients() {
               Contact me today
             </h2>
             <Button
-              href="/"
+              href="/contact"
               invert={true}
-              className={'mt-5 hover:border-white'}
+              className={'mt-5 border border-white hover:bg-white hover:text-black'}
               inactiveBg={''}
               inactiveText={'text-white'}
               activeBg={'bg-white'}
