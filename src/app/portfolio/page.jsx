@@ -100,15 +100,11 @@ export default async function Work() {
 
   return (
     <>
-      <PageIntro
-        eyebrow="My Portfolio"
-        title="Proven solutions for plumbers in Canada"
-      >
+      <PageIntro eyebrow="My Portfolio" title="Take a look at my work">
         <p>
-          I’m a web developer focused on creating user-friendly, fast, and
-          responsive websites. I work with plumbing businesses across Canada to
-          develop tailored solutions that suit the unique needs of your
-          business.
+          I'm a web developer and programmer focused on creating solutions for
+          you and your business. I work with people in Kelowna and Canada to
+          make sites fit for your vision.
         </p>
       </PageIntro>
 

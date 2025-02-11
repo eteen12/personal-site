@@ -206,13 +206,12 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Custom web design and development in Kelowna
+            Actually affordable web development, in Kelowna
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            Custom coded websites ensuring responsive, user friendly websites
-            tailored to your business. Whether you&apos;re looking for a new
-            site or need to update an existing one, I provide custom web design
-            and development services that help you stand out online.
+            Custom coded websites to make you and your business modern and
+            informative. No unnecessary complexity—just a well-made site that
+            represents you and your business the right way.
           </p>
         </FadeIn>
       </Container>

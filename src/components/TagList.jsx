@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import { Button } from './Button'
 
 export function TagList({ children, className }) {
   return (
@@ -17,6 +18,26 @@ export function TagListItem({ children, className }) {
       )}
     >
       {children}
+    </li>
+  )
+}
+
+export function TagListItemLink({ children, className }) {
+  return (
+    <li
+      className={clsx(
+        'rounded-full bg-black px-4 py-1.5 text-base text-white',
+        className,
+      )}
+    >
+      <a
+        href="https://www.sweetyards.ca/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {' '}
+        {children}
+      </a>
     </li>
   )
 }
