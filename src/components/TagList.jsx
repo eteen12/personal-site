@@ -22,7 +22,7 @@ export function TagListItem({ children, className }) {
   )
 }
 
-export function TagListItemLink({ children, className }) {
+export function TagListItemLink({ children, className, link }) {
   return (
     <li
       className={clsx(
@@ -30,12 +30,7 @@ export function TagListItemLink({ children, className }) {
         className,
       )}
     >
-      <a
-        href="https://www.sweetyards.ca/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {' '}
+      <a href={link} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     </li>

@@ -73,8 +73,6 @@ export const metadata = {
 }
 
 export default async function About() {
-  
-
   return (
     <>
       <div className="mx-auto grid max-w-[1300px] grid-cols-1 lg:grid-cols-2">
@@ -87,14 +85,12 @@ export default async function About() {
             <div className="mt-10 max-w-2xl space-y-6 text-base">
               <p>
                 Im a confident and competent developer, using technologies such
-                as NextJS, Tailwind CSS, and Linux. I have a passion for
-                creating clean, efficient, and user-friendly websites
+                as NextJS, Tailwind CSS, and Linux. I have a passion for tech,
+                and am always looking for ways to improve.
               </p>
               <p>
-                When I’m not coding, you can find me exploring my other
-                interests such as music, philosophy, and personal development. I
-                strive to improve myself both professionally and personally, and
-                I’m always looking for new ways to learn in the world of tech.
+                When I'm not coding, you can find me expoloring my other
+                interests like dirt biking, music, history, or studying.
               </p>
             </div>
           </PageIntro>
@@ -113,8 +109,6 @@ export default async function About() {
       </div>
 
       <Culture />
-
-      
 
       <ContactSection />
     </>
