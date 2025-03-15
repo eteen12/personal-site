@@ -1,17 +1,14 @@
 import clsx from 'clsx'
 
-import { Border } from '@/components/Border'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { Border } from './Border'
+import { FadeIn, FadeInStagger } from './FadeIn'
 
 export function GridList({ children, className }) {
   return (
     <FadeInStagger>
       <ul
         role="list"
-        className={clsx(
-          'grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3',
-          className,
-        )}
+        className={clsx('grid grid-cols-1 gap-10 lg:grid-cols-3', className)}
       >
         {children}
       </ul>
@@ -40,7 +37,7 @@ export function GridListItem({ title, children, className, invert = false }) {
           >
             {title}.
           </strong>{' '}
-          {children}
+          <div className="h-[300px] md:h-[400px] mt-4">{children}</div>
         </Border>
       </FadeIn>
     </li>

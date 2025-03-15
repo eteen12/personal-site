@@ -1,0 +1,50 @@
+import logo from '/public/logos/empire-logo.webp'
+import professional_score from './professional_score.webp'
+import { TagListItemLink } from '@/components/TagList'
+
+export const caseStudy = {
+  client: 'Empire Landscaping Ltd.',
+  title: 'Empire Landscaping Ltd.',
+  description:
+    'A modern website designed to showcase Empire’s craftsmanship and passion for landscaping. Built in close collaboration with one of the city’s most trusted teams, it reflects their dedication to quality and professionalism.',
+  summary: [
+    'This project is clean and professional while showcasing the best work done by Empire Landscaping. Highlighting a large gallery section and many features, I worked closely with the team to code and deliver their vision. ',
+   
+  ],
+  logo,
+
+date: '2025-04',
+service: 'Web development/design',
+testimonial: {
+author: { name: 'Jenny Wilson', role: 'CPO of Phobia' },
+content:
+'The team at Studio went above and beyond with our onboarding, even finding a way to access the user’s microphone without triggering one of those annoying permission dialogs.',
+},
+site: 'https://empirelandscaping.ca/',
+}
+
+export const metadata = {
+  title: `${caseStudy.client} portfolio project`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+This project is clean and professional while showcasing the best work done by Empire Landscaping. Highlighting a large gallery section and many features, I worked closely with the team to code and deliver their vision.
+
+The design focuses on professionalism and trustworthiness, with a focus on providing all the necessary information in a clear flashy and accessible way.
+
+## What was done?
+
+<TagList>
+  <TagListItem>Frontend (Next.js)</TagListItem>
+  <TagListItem>Styling (Tailwind CSS)</TagListItem>
+  <TagListItem>SEO</TagListItem>
+</TagList>
+
+## Site link
+
+<TagList>
+  <TagListItemLink link={"https://empirelandscaping.ca"}>empirelandscaping.ca</TagListItemLink>
+
+</TagList>

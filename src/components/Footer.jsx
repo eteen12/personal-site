@@ -1,18 +1,21 @@
+'use client'
+import { useState, useEffect } from 'react'
+
 import Link from 'next/link'
 
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { Logo } from '@/components/Logo'
-import { socialMediaProfiles } from '@/components/SocialMedia'
+import { Container } from './Container'
+import { FadeIn } from './FadeIn'
+import { Logo } from './Logo'
+import { socialMediaProfiles } from './SocialMedia'
 
 const navigation = [
   {
     title: 'portfolio',
     links: [
-      { title: 'Minimalist site', href: '/portfolio/minimalist-plumbing-site' },
+      { title: 'Sweet Yards', href: '/portfolio/sweet-yards-landscaping' },
       {
-        title: 'Design site',
-        href: '/portfolio/design-oriented-plumbing-site',
+        title: 'Gaia Landscaping',
+        href: '/portfolio/gaia-landscaping',
       },
       {
         title: 'Professional site',
@@ -85,13 +88,19 @@ function ArrowIcon(props) {
 }
 
 function NewsletterForm() {
+  const [isClicked, setIsClicked] = useState(null)
+
+  const handleClick = () => {
+    setIsClicked(true)
+    alert('The button really doesnt do anything.')
+  }
   return (
     <form className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
+        Sign up for the newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-       Or dont.
+        Or dont, the button does nothing.
       </p>
       <div className="relative mt-6">
         <input
@@ -106,6 +115,7 @@ function NewsletterForm() {
             type="submit"
             aria-label="Submit"
             className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
+            onClick={handleClick}
           >
             <ArrowIcon className="w-4" />
           </button>

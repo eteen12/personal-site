@@ -1,16 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Blockquote } from '@/components/Blockquote'
-import { Border } from '@/components/Border'
-import { Button } from '@/components/Button'
-import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { PageIntro } from '@/components/PageIntro'
+import { Blockquote } from '../../components/Blockquote'
+import { Border } from '../../components/Border'
+import { Button } from '../../components/Button'
+import { ContactSection } from '../../components/ContactSection'
+import { Container } from '../../components/Container'
+import { FadeIn, FadeInStagger } from '../../components/FadeIn'
+import { PageIntro } from '../../components/PageIntro'
 
-import { formatDate } from '@/lib/formatDate'
-import { loadCaseStudies } from '@/lib/mdx'
+import { formatDate } from '../../lib/formatDate'
+import { loadCaseStudies } from '../../lib/mdx'
 
 function CaseStudies({ caseStudies }) {
   return (

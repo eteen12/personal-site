@@ -1,16 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { List, ListItem } from '@/components/List'
-import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
+import { ContactSection } from '../components/ContactSection'
+import { Container } from '../components/Container'
+import { FadeIn, FadeInStagger } from '../components/FadeIn'
+import { List, ListItem } from '../components/List'
+import { SectionIntro } from '../components/SectionIntro'
+import { StylizedImage } from '../components/StylizedImage'
 import imageLaptop from '@/images/laptop.jpg'
-import { loadCaseStudies } from '@/lib/mdx'
+import { loadCaseStudies } from '../lib/mdx'
 
-import { Button } from '@/components/Button'
+import { Button } from '../components/Button'
 
 function Clients() {
   return (

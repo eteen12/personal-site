@@ -1,4 +1,4 @@
-import { MDXComponents } from '@/components/MDXComponents'
+import { MDXComponents } from './src/components/MDXComponents'
 
 export function useMDXComponents(components) {
   return {

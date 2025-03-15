@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import { Border } from '@/components/Border'
+import { Border } from './Border'
 
 function BlockquoteWithImage({ author, children, className, image }) {
   return (

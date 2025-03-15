@@ -1,25 +1,26 @@
-import logo from '/public/logos/code_brackets.webp'
+import logo from '/public/logos/gaiaLogo.png'
 import design from './design_score.webp'
+import { TagListItemLink } from '@/components/TagList'
 
 export const caseStudy = {
-  client: 'Plumbing',
-  title: 'Design oriented plumbing site',
+  client: 'Gaia Landscaping Inc.',
+  title: 'Gaia Landscaping Inc.',
   description:
-    'This website design was created to be visually appealing with multiple areas of design, and images for your content. ',
+    'Built for simplicity and performance, this site showcases the exceptional work of these talented folks. Gaia needed help creating a modern, user-friendly experience, and I delivered.',
   summary: [
     'This project is all about clean, practical design that looks good and works well. Every detail was carefully considered to make sure the website is easy to use and navigate. It focuses on a simple, straightforward layout that lets users find what they need without any distractions.',
 
 ],
 logo,
 
-date: '2024-11',
+date: '2025-03',
 service: 'Web development/design',
 testimonial: {
 author: { name: 'Emily Selman', role: 'Head of Engineering at Unseal' },
 content:
 'Studio did an amazing job building out our core blockchain infrastructure and I’m sure once PlaceboCoin rallies they’ll be able to finish the project.',
 },
-site: 'https://wflo-plumbing-portfolio.vercel.app/',
+site: 'https://gaialandscaping.ca',
 }
 
 export const metadata = {
@@ -38,11 +39,11 @@ The design is modern, but not over the top—just a solid balance between style 
 <TagList>
   <TagListItem>Frontend (Next.js)</TagListItem>
   <TagListItem>Styling (Tailwind CSS)</TagListItem>
-  <TagListItem>SEO</TagListItem>
-  <TagListItem>Speed optimization</TagListItem>
 </TagList>
 
-<Blockquote image={{ src: design }}>
-  Studio did an amazing job building out our core blockchain infrastructure and
-  I’m sure once PlaceboCoin rallies they’ll be able to finish the project.
-</Blockquote>
+## Site link
+
+<TagList>
+  <TagListItemLink link={"https://gaialandscaping.ca"}>gaialandscaping.ca</TagListItemLink>
+
+</TagList>

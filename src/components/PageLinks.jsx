@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import { Border } from '@/components/Border'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { GridPattern } from '@/components/GridPattern'
-import { SectionIntro } from '@/components/SectionIntro'
-import { formatDate } from '@/lib/formatDate'
+import { Border } from './Border'
+import { Container } from './Container'
+import { FadeIn, FadeInStagger } from './FadeIn'
+import { GridPattern } from './GridPattern'
+import { SectionIntro } from './SectionIntro'
+import { formatDate } from '../lib/formatDate'
 
 function ArrowIcon(props) {
   return (

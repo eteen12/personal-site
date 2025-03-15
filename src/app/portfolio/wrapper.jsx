@@ -1,11 +1,11 @@
-import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
-import { MDXComponents } from '@/components/MDXComponents'
-import { PageIntro } from '@/components/PageIntro'
-import { PageLinks } from '@/components/PageLinks'
-import { loadCaseStudies } from '@/lib/mdx'
+import { ContactSection } from '../../components/ContactSection'
+import { Container } from '../../components/Container'
+import { FadeIn } from '../../components/FadeIn'
+import { GrayscaleTransitionImage } from '../../components/GrayscaleTransitionImage'
+import { MDXComponents } from '../../components/MDXComponents'
+import { PageIntro } from '../../components/PageIntro'
+import { PageLinks } from '../../components/PageLinks'
+import { loadCaseStudies } from '../../lib/mdx'
 
 export default async function CaseStudyLayout({ caseStudy, children }) {
   let allCaseStudies = await loadCaseStudies()
@@ -59,7 +59,8 @@ export default async function CaseStudyLayout({ caseStudy, children }) {
                 </iframe>
               </div>
               <p className="-my-px mx-auto max-w-[76rem]">
-                (Page load times may be slower due to embedding another website.)
+                (Page load times may be slower due to embedding another
+                website.)
               </p>
             </div>
           </FadeIn>
