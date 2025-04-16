@@ -10,7 +10,7 @@ import { socialMediaProfiles } from './SocialMedia'
 
 const navigation = [
   {
-    title: 'portfolio',
+    title: 'Portfolio',
     links: [
       { title: 'Sweet Yards', href: '/portfolio/sweet-yards-landscaping' },
       {
@@ -18,8 +18,8 @@ const navigation = [
         href: '/portfolio/gaia-landscaping',
       },
       {
-        title: 'Professional site',
-        href: '/portfolio/professional-plumbing-site',
+        title: 'Empire Landscaping',
+        href: '/portfolio/empire-landscaping',
       },
       {
         title: (
