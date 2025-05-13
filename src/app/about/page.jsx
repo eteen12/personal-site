@@ -32,11 +32,11 @@ function Culture() {
               allowfullscreen
             ></iframe>
           </GridListItem>
-          <GridListItem title="Playing an out of tune guitar (lol)" invert>
+          <GridListItem title="Getting old bikes running" invert>
             <iframe
               width="100%"
               height="100%"
-              src="https://youtube.com/embed/5P0WjeijMSs?si=VmYd0p_scAZqdLkA"
+              src="https://youtube.com/embed/2cVASY-3qSc?si=PKxwjP04WPfzWepv"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -57,7 +57,7 @@ function Culture() {
             ></iframe>
           </GridListItem>
         </GridList>
-        <p className="text-center text-white mt-8">
+        <p className="mt-8 text-center text-white">
           Check out more of what I got going on!{' '}
           <a
             className="text-blue-400 underline"
@@ -104,8 +104,8 @@ export const metadata = {
 export default async function About() {
   return (
     <>
-      <div className="mx-auto grid max-w-[1300px] grid-cols-1 lg:grid-cols-2">
-        <div>
+      <div className="mx-auto grid max-w-[1300px] grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="">
           <PageIntro eyebrow="About me" title="About Ethan Breitkreutz">
             <p className="underline">
               Ethan Breitkreutz is a Canadian web developer, student, and
@@ -113,14 +113,14 @@ export default async function About() {
             </p>
             <div className="mt-10 max-w-2xl space-y-6">
               <p>
-                When I'm not coding, you can find me expoloring my other
-                interests like dirt biking, music, history, or studying.
+                When I'm not coding, you can find me studying or enjoying my
+                other passions.
               </p>
             </div>
           </PageIntro>
         </div>
-        <div className="relative mt-auto h-[400px] rounded-4xl">
-          <div className="relative mx-auto mt-auto h-[400px] w-[500px] rounded-4xl">
+        <div className="flex justify-center mt-auto">
+          <div className="relative mx-auto h-[450px] w-[550px] rounded-4xl">
             <Image
               src={'/about/ethan2.webp'}
               alt="photo of ethan breitkreutz smiling at camera"
