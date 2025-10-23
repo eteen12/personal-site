@@ -206,13 +206,10 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Websites That Reflect Your Brand's Vision.
+            Custom Software Solutions for Businesses,
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            Websites that are simple, clear, and focused on your business's true
-            needs. Delivering real value without hidden complexity—just
-            transparent, effective solutions that truly represent you and your
-            business.
+         Websites, AI-powered automation, and apps that streamline your work, letting you focus on what matters most.
           </p>
         </FadeIn>
       </Container>
