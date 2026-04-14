@@ -1,0 +1,87 @@
+import logo from '/public/logos/empire-logo.webp'
+import cmsScreenshot from './cms-screenshot.png'
+import { TagListItemLink } from '@/components/TagList'
+
+export const caseStudy = {
+  client: 'Empire Landscaping — AI Blog CMS',
+  title: 'Empire Landscaping — AI Blog CMS',
+  description:
+    'A custom admin CMS and AI writing assistant built into Empire Landscaping\'s website. The system lets the team draft, edit, and score blog posts against a 5-category 100-point SEO rubric — right alongside the SEO service I also offer clients.',
+  summary: [
+    "A private admin CMS I added to Empire Landscaping's Next.js site so the team can write, edit, and publish blog posts without ever touching code. The built-in AI Writing Assistant streams edits into a Tiptap editor, enforces a knowledge base of SEO + local-SEO + blog-writing principles, and scores every post against a 5-category 100-point rubric before it goes live.",
+  ],
+  logo,
+
+  date: '2026-04',
+  service: 'AI tooling / SEO service',
+  site: 'https://empirelandscaping.ca/',
+  previewImage: cmsScreenshot,
+}
+
+export const metadata = {
+  title: `${caseStudy.client} portfolio project`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+After launching Empire Landscaping's marketing site, I built a second layer on top of it: a **private admin CMS with a built-in AI writing assistant** that helps the team publish blog content that actually ranks. It's a real example of the SEO service I offer — baked into the product, not bolted on after the fact.
+
+The CMS lives at a protected `/admin` route on their live Next.js site. From there, the team can create a new post, edit existing ones in a Tiptap rich-text editor, preview before publishing, and run everything through an AI Writing Assistant that knows Empire's voice, Empire's services, and what Google actually rewards in 2026.
+
+## What it does
+
+### Rich Tiptap editor with AI-streaming edits
+
+The editor is a full Tiptap setup — headings, lists, links, tables, inline formatting, images — with a custom extension that lets the AI assistant highlight and rewrite specific passages in place. Edits stream in token-by-token via server-sent events, so the team sees the assistant working in real time instead of waiting on a big blocking request.
+
+### AI Writing Assistant (Gemini 3 Flash via OpenRouter)
+
+A side-panel assistant uses tool calling to take real actions on the post — not just chat. It can:
+
+- Suggest or rewrite titles, meta descriptions, intros, and body sections.
+- Insert schema (`BlogPosting`, `HowTo`, `FAQPage`) when the content structure actually warrants it.
+- Update the featured image, alt text, and OG metadata.
+- Generate FAQs for genuinely Q&A-structured posts.
+- **Score the current post** against the 5-category rubric and return a numeric breakdown plus a band label.
+
+The assistant is grounded in a markdown knowledge base living inside the repo — SEO principles distilled from Google's Sept 2025 Search Quality guidelines, local-SEO rules specific to the Okanagan, and a 6-pillar blog-writing framework. Swapping models is a one-line change in the route thanks to the OpenRouter integration.
+
+### 5-category / 100-point SEO scoring rubric
+
+Every post can be scored on demand. The rubric covers:
+
+- **Content Quality (30)** — depth, originality, readability, first-hand experience signals.
+- **SEO Optimization (25)** — title, meta description, keywords, internal linking, schema.
+- **E-E-A-T Signals (20)** — experience, expertise, authoritativeness, trust.
+- **Technical Elements (15)** — heading hierarchy, paragraph length, image alt text, OG tags.
+- **AI Citation Readiness (10)** — answer-first formatting, passage-level quotability for AI Overviews, ChatGPT, and Perplexity.
+
+The result comes back as a total score, a band (Weak / Okay / Strong / Excellent), and a per-category breakdown with specific fixes — so the team doesn't just get a grade, they get a to-do list.
+
+### Cookie-gated admin, protected API
+
+The whole admin surface is gated behind a simple `admin_auth` cookie check on both the pages and the `/api/admin/*` routes, so the Writing Assistant and its tools can't be called from outside. Safe to ship on the live site, zero risk of random visitors driving the AI.
+
+## Why this matters
+
+This project is a real-world example of the **SEO service I offer clients** — not theoretical advice, not a PDF audit, but SEO enforced inside the tool the content team actually uses. Empire can publish landscaping articles that are consistently well-structured, locally relevant, and optimized for both Google and AI answer engines, without needing an SEO specialist in the room for every post.
+
+It's the kind of tech solution I build when "just hire a writer" or "buy a SaaS" isn't enough — a custom internal tool that turns a one-time service into an ongoing advantage.
+
+## Tech stack
+
+<TagList>
+  <TagListItem>Next.js (App Router) + Tiptap editor</TagListItem>
+  <TagListItem>AI — Gemini 3 Flash via OpenRouter (tool calling)</TagListItem>
+  <TagListItem>Server-sent events for streaming edits</TagListItem>
+  <TagListItem>Supabase (Postgres) for posts & media</TagListItem>
+  <TagListItem>Markdown knowledge base (SEO + local SEO + blog writing)</TagListItem>
+  <TagListItem>Cookie-gated admin + protected API routes</TagListItem>
+</TagList>
+
+## Site link
+
+<TagList>
+  <TagListItemLink link={"https://empirelandscaping.ca"}>empirelandscaping.ca</TagListItemLink>
+</TagList>

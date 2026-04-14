@@ -30,7 +30,7 @@ function CaseStudies({ caseStudies }) {
                     <Image
                       src={caseStudy.logo}
                       alt=""
-                      className="h-16 w-16 flex-none"
+                      className="h-16 w-auto flex-none"
                       unoptimized
                     />
                     <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
@@ -90,9 +90,9 @@ function CaseStudies({ caseStudies }) {
 }
 
 export const metadata = {
-  title: 'Ethan Breitkreutz Portfolio',
+  title: 'Portfolio - Tech Solutions Projects | EthanBDev',
   description:
-    'Discover Ethan Breitkreutz’s portfolio showcasing web design and development expertise with Next.js, Tailwind CSS, and custom websites for businesses. Crafting professional, user-friendly websites that drive success.',
+    'See the work of Ethan Breitkreutz - websites, web apps, and tech solutions built for businesses in Kelowna, the Okanagan, and across Canada using Next.js and Tailwind CSS.',
 }
 
 export default async function Work() {

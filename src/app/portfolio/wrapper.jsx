@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import { HiArrowUpRight } from 'react-icons/hi2'
+
 import { ContactSection } from '../../components/ContactSection'
 import { Container } from '../../components/Container'
 import { FadeIn } from '../../components/FadeIn'
@@ -19,6 +22,19 @@ export default async function CaseStudyLayout({ caseStudy, children }) {
         <header>
           <PageIntro eyebrow="Project" title={caseStudy.title} centered>
             <p>{caseStudy.description}</p>
+            {caseStudy.site && (
+              <p className="mt-6 flex justify-center">
+                <a
+                  href={caseStudy.site}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-x-2 rounded-full bg-neutral-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-neutral-800"
+                >
+                  Visit the live site!
+                  <HiArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </p>
+            )}
           </PageIntro>
 
           <FadeIn>
@@ -49,19 +65,30 @@ export default async function CaseStudyLayout({ caseStudy, children }) {
 
             <div className="border-y border-neutral-200 bg-neutral-100">
               <div className="-my-px mx-auto max-w-[76rem] bg-neutral-200">
-                <iframe
-                  src={caseStudy.site}
-                  width="100%"
-                  height="800px"
-                  frameborder="0"
-                >
-                  Your browser does not support iframes.
-                </iframe>
+                {caseStudy.previewImage ? (
+                  <Image
+                    src={caseStudy.previewImage}
+                    alt={`${caseStudy.title} preview`}
+                    className="h-auto w-full"
+                    sizes="(min-width: 1280px) 76rem, 100vw"
+                  />
+                ) : (
+                  <iframe
+                    src={caseStudy.site}
+                    width="100%"
+                    height="800px"
+                    frameBorder="0"
+                  >
+                    Your browser does not support iframes.
+                  </iframe>
+                )}
               </div>
-              <p className="-my-px mx-auto max-w-[76rem]">
-                (Page load times may be slower due to embedding another
-                website.)
-              </p>
+              {!caseStudy.previewImage && (
+                <p className="-my-px mx-auto max-w-[76rem]">
+                  (Page load times may be slower due to embedding another
+                  website.)
+                </p>
+              )}
             </div>
           </FadeIn>
         </header>

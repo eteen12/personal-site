@@ -116,8 +116,9 @@ function ContactDetails() {
 }
 
 export const metadata = {
-  title: 'Contact',
-  description: 'Want to contact Ethan Breitkreutz? Contact me here.',
+  title: 'Contact Ethan Breitkreutz — Kelowna Tech Solutions',
+  description:
+    'Get in touch with Ethan Breitkreutz for tech solutions in Kelowna, BC — websites, web apps, AI automation, and more for Okanagan businesses.',
 }
 
 export default function Contact() {

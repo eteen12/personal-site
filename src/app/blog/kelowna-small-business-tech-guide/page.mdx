@@ -1,0 +1,158 @@
+export const article = {
+  date: '2026-04-14',
+  title: 'The Kelowna Small Business Tech Guide (2026 Edition)',
+  description:
+    'A no-fluff tech guide for Kelowna small businesses: websites, SEO, automation, CRMs, and AI tools that actually work in the Okanagan market.',
+  author: 'Ethan Breitkreutz',
+  category: 'Guides',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+  alternates: {
+    canonical: 'https://ethanbdev.com/blog/kelowna-small-business-tech-guide',
+  },
+}
+
+Running a small business in Kelowna means juggling tourist season chaos, a quiet February, unpredictable smoke days, and customers who split their time between downtown and Big White. The tech stack that fits a Toronto business does not fit here. This guide is the short version of what actually works for businesses between UBCO and the south end of Okanagan Lake.
+
+## Answer first: what tech does a Kelowna small business actually need?
+
+Four things, in order: a fast local-SEO-tuned website, Google Business Profile optimized and linked to that site, one automation for lead follow-up or booking reminders, and a simple CRM or spreadsheet that does not fall apart when July hits. Everything else — AI, custom dashboards, fancy analytics — is optional. Nail those four first and you are ahead of most of your competition.
+
+## Why Kelowna is its own market
+
+A few things that make the Okanagan different from what generic tech advice assumes:
+
+- **Seasonality is extreme.** A tourism-adjacent business can do 40% of its year between June and August. Your systems need to scale without your team growing.
+- **Labour is tight and expensive.** Automation is not a nice-to-have. It replaces the junior hire you could not find anyway.
+- **Customers are mobile.** Between tourists, commuters from Lake Country, and UBCO students, most first visits happen on a phone in transit. Site speed is everything.
+- **Vancouver and Calgary agencies treat Okanagan businesses as second-tier.** You get B-team service at A-team prices. Local beats remote on communication every time.
+
+## The four-layer stack that works
+
+### Layer 1: Website and local SEO
+
+This is the non-negotiable. A modern site built on Next.js or Astro, hosted on Vercel, with real local SEO baked in. Specifics that matter in Kelowna:
+
+- Service area pages for [Kelowna](/locations/kelowna), [Vernon](/locations/vernon), West Kelowna, and Lake Country
+- LocalBusiness schema with actual address and service radius
+- Mobile page load under 2 seconds on LTE
+- Phone number in the header, tap-to-call on mobile
+- Real photos of your team and Okanagan job sites
+
+See how this plays out on [Empire Landscaping](/portfolio/empire-landscaping) — a [landscaping](/industries/landscaping) site built exactly this way.
+
+### Layer 2: Google Business Profile
+
+More important than your website for 60% of service businesses in Kelowna. Fill out every field, post weekly updates, and respond to every review. Link back to your new site from the GBP and from every post.
+
+### Layer 3: One automation
+
+Pick the single most annoying repetitive task and kill it first. Common wins:
+
+1. **Lead follow-up.** Auto-email or text within five minutes of a form fill. Triples response rates.
+2. **Booking reminders.** 24-hour and 1-hour SMS cuts no-shows in half.
+3. **Review requests.** Auto-send a review link 48 hours after job completion.
+4. **Invoice chasing.** Automated reminders at 7, 14, and 30 days past due.
+
+Start with one. Zapier, Make, or n8n for off-the-shelf. Custom code if the workflow is weird enough to need it.
+
+### Layer 4: CRM or pipeline tracking
+
+You do not need Salesforce. You probably do not even need HubSpot. For most Kelowna small businesses, one of these works:
+
+- **Jobber or ServiceTitan** — trades and service businesses
+- **Square or Vagaro** — salons, spas, appointments ([hair salon](/industries/hair-salon) setups)
+- **Airtable or Notion** — light custom workflow
+- **A real database and dashboard** — when off-the-shelf keeps breaking
+
+The [Realtor Coaching App](/portfolio/realtor-coaching-app) is an example of the last one: the client had outgrown three different SaaS tools and we built a dashboard that actually fit their process.
+
+## See real work
+
+Three builds that show the stack in action:
+
+- [Empire Blog CMS](/portfolio/empire-blog-cms) — content engine for a local landscaping company that wanted to own SEO rather than rent it from an agency.
+- [CurbChat](/portfolio/curbchat) — custom outreach tool for real estate.
+- [Teleta Vox](/portfolio/teleta-vox) — product site with custom functionality for a small team.
+
+Full list on the [portfolio page](/portfolio).
+
+## Tools I actually recommend in 2026
+
+Cut through the noise:
+
+- **Website:** Next.js or Astro, Tailwind, Vercel hosting
+- **Analytics:** Plausible (privacy-friendly) or GA4
+- **Email:** Google Workspace — no exceptions
+- **Newsletter:** Beehiiv or ConvertKit
+- **Forms:** Native forms on your own site, not Typeform embeds
+- **Scheduling:** Cal.com (self-hosted or SaaS) or SavvyCal
+- **Docs and SOPs:** Notion or Google Docs
+- **Accounting:** QuickBooks Online (still the default in BC)
+- **Payments:** Stripe for online, Square for in-person
+- **AI:** Claude or ChatGPT for drafts, internal only, not customer-facing
+
+Avoid: any "all-in-one marketing platform" that charges $300+ a month. They lock you in and do each job badly.
+
+## The Kelowna calendar: timing your tech work
+
+- **January to March** — build and launch new systems. Everyone is quiet. Prices are lower. Developers answer faster.
+- **April to May** — stress test before tourist season. Fix what breaks at scale.
+- **June to August** — hands off. Do not launch anything new. Ride what you built.
+- **September to October** — analyze the season. Find the three worst bottlenecks.
+- **November to December** — plan next year's builds.
+
+Businesses that treat tech as a winter project consistently outperform those that scramble in July.
+
+## Red flags when hiring tech help in Kelowna
+
+1. They cannot show you three live local sites.
+2. Their pitch deck says "digital transformation" or "synergy."
+3. They require a 12-month retainer before any work.
+4. They outsource development without telling you.
+5. They cannot explain what they do in one sentence.
+6. They quote without asking what your business actually does.
+
+A local developer who picks up the phone is worth more than a Vancouver agency with a slick brochure.
+
+## What to do in the next 30 days
+
+If you read nothing else, do these four things:
+
+1. **Run a PageSpeed Insights test** on your current site. If mobile is under 70, your site is costing you leads.
+2. **Audit your Google Business Profile.** Fill every field, add 10 fresh photos, post an update.
+3. **Pick your worst repetitive task** and sketch how to automate it.
+4. **Write down three competitors' websites** you respect. Send them to whoever builds your next site.
+
+## FAQ
+
+### What is the biggest tech mistake Kelowna small businesses make?
+
+Paying a monthly SEO or marketing retainer without first fixing a slow, outdated website. You are pouring water into a bucket with holes.
+
+### Do I need AI in my business?
+
+Use it for drafts and summaries internally. Be extremely careful about customer-facing AI — generic chatbots hurt trust in a small local market like Kelowna where reputation is everything.
+
+### Should I hire a Kelowna developer or a Vancouver agency?
+
+Local wins on communication, timeline, and price for projects under $30k. Agencies make sense for enterprise work with dedicated project managers. Most Okanagan businesses fit the first bucket.
+
+### How much should I budget for tech annually?
+
+2% to 5% of revenue is the healthy range for small businesses. Under 1% and you are bottlenecked. Over 8% and you are probably overspending on SaaS you do not use.
+
+### What if I am starting from zero?
+
+Website first, GBP second, one automation third. Do not skip ahead. I have seen owners buy a $200/month CRM before they had a site that loaded — it is always a waste.
+
+## Wrapping up
+
+Kelowna is a small enough market that doing the boring stuff well puts you in the top 10%. Fast site, real GBP, one automation, one CRM. That is the whole stack for 90% of local businesses. Anything beyond it should solve a problem you can name in one sentence.
+
+If you want a local set of eyes on your stack, browse [the portfolio](/portfolio) and reach out.
+
+Overwhelmed? That's what I do for a living. [Contact me](/contact).

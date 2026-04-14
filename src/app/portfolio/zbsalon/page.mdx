@@ -1,0 +1,46 @@
+import logo from '/public/logos/zbsalon-logo.png'
+import { TagListItemLink } from '@/components/TagList'
+
+export const caseStudy = {
+  client: "Zobeida's Hair Salon",
+  title: "Zobeida's Hair Salon",
+  description:
+    "A polished, design-forward website for a professional hairstylist in Kelowna. Built to showcase services, pricing, and gallery work, and to help Zobeida get found in local search.",
+  summary: [
+    "A clean, design-oriented marketing site for Zobeida's Hair Salon in Kelowna. Services, pricing, gallery, and contact all live in one fast, mobile-first Next.js build — with local SEO and schema markup wired in from day one to help Zobeida show up for searches like 'hairstylist Kelowna'.",
+  ],
+  logo,
+
+  date: '2025-01',
+  service: 'Web development/design',
+  site: 'https://zbsalon.com',
+}
+
+export const metadata = {
+  title: `${caseStudy.client} portfolio project`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+Zobeida's Hair Salon needed a website that looked as professional as the work being done inside the salon. I built a polished, design-forward marketing site from scratch — services, pricing, gallery, and contact — with a focus on local SEO so clients in Kelowna can actually find her.
+
+The site is a fully static Next.js build, which means it loads fast, works perfectly on mobile, and costs almost nothing to host. Every page is built around Zobeida's real services and her own photography.
+
+## What was done?
+
+<TagList>
+  <TagListItem>Frontend (Next.js + Tailwind CSS)</TagListItem>
+  <TagListItem>Custom design and layout</TagListItem>
+  <TagListItem>Services & pricing pages</TagListItem>
+  <TagListItem>Image gallery</TagListItem>
+  <TagListItem>Contact form with email delivery (Nodemailer)</TagListItem>
+  <TagListItem>Local SEO + LocalBusiness / HairSalon schema</TagListItem>
+  <TagListItem>Sitemap, robots, and llms.txt for AI crawlers</TagListItem>
+</TagList>
+
+## Site link
+
+<TagList>
+  <TagListItemLink link={"https://zbsalon.com"}>zbsalon.com</TagListItemLink>
+</TagList>

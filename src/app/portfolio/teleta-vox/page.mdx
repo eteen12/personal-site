@@ -1,0 +1,95 @@
+import logo from '/public/logos/teleta-vox-logo.png'
+import { TagListItemLink } from '@/components/TagList'
+
+export const caseStudy = {
+  client: 'Teleta Vox',
+  title: 'Teleta Vox — AI CRM for Realtors',
+  description:
+    'An AI-powered CRM built specifically for real estate professionals. Voice and chat assistant, client management, task tracking, scheduled emails, receipt scanning, compliance chat, and Google Drive storage — all wrapped in a premium editorial UI.',
+  summary: [
+    'Teleta Vox is a full-stack AI CRM for realtors — voice/chat assistant, client and task management, automated scheduled emails, AI receipt scanning, and a compliance chat agent trained on real estate regulations. Next.js 16 frontend, FastAPI + MongoDB backend, Stripe subscriptions, ElevenLabs voice, and Google Drive storage under the user\'s own account.',
+  ],
+  logo,
+
+  date: '2026-03',
+  service: 'Full-stack SaaS development',
+  site: 'https://teletavox.com',
+}
+
+export const metadata = {
+  title: `${caseStudy.client} portfolio project`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+Teleta Vox is a full-stack AI-powered CRM purpose-built for real estate professionals. Realtors juggle clients, deals, showings, tax receipts, compliance disclosures, and constant follow-ups — most generic CRMs weren't designed for any of it. Teleta Vox is the tool I built to pull all of that into one place, with an AI assistant sitting on top that can speak, listen, write, and act on the user's behalf.
+
+The product runs at [teletavox.com](https://teletavox.com) with a Next.js 16 frontend, a FastAPI + Python backend, MongoDB Atlas, Stripe subscriptions, and a custom design system inspired by high-end editorial magazines — deliberately miles away from "standard SaaS" to feel like a premium concierge, not another dashboard.
+
+> Teleta Vox is a product of **Teleta Development**, a company currently being built around it. We're actively developing the platform and planning our official launch for **mid-2026**.
+
+## What it does
+
+### AI voice and chat assistant
+
+The core of the product is an AI agent (Pydantic AI + Gemini 2.5 Flash via OpenRouter) that can hold full conversations over **both text and voice**. Voice input and output run through ElevenLabs over a WebSocket connection for real-time speech-to-text and text-to-speech, so a realtor can literally talk to their CRM while driving between showings.
+
+The agent has tools for reading and writing client notes, creating tasks, scheduling follow-up emails, and pulling data from the user's own workspace.
+
+### Client and task management
+
+- **Clients** — rich profile per contact with notes, property interests, compliance disclosure tracking, and activity history.
+- **Tasks** — lightweight task board tied to clients or standalone, with AI-assisted creation.
+- **Scheduled emails** — write or AI-generate an email now, have it send later, with Resend handling delivery.
+- **Receipt scanning** — snap or upload a tax receipt; the AI parses amount, vendor, date, and category and files it away for year-end.
+
+### Compliance chat
+
+Canadian real estate comes with strict disclosure and compliance rules. Teleta Vox ships with a **compliance chat agent** backed by a Qdrant vector database of real estate regulations — realtors can ask "do I need to disclose X in this scenario?" and get a grounded answer with the relevant regulation context, not a hallucinated guess.
+
+Every new client has a tracked compliance disclosure state, so nothing slips through the cracks.
+
+### Google Drive storage (user-owned)
+
+Instead of hosting client files on our servers, Teleta Vox uses the Google Drive API with the `drive.file` scope — meaning **files live in the user's own Google Drive**, not ours. Realtors keep ownership of their data, and the app only touches files it creates. This is a big deal for a profession that legally has to retain documents for years.
+
+### Billing and auth
+
+- **Stripe subscriptions** — Solo and Pro tiers, monthly and yearly, with webhook-driven plan upgrades and cancellations.
+- **Auth.js v5** — Google, LinkedIn, and Resend magic-link sign-in.
+- **Connect-Drive-separately** flow — non-Google users can still link their Drive without changing how they sign in.
+
+## Design system
+
+Teleta Vox has its own design language I built from scratch — "The Digital Curator." It follows an editorial, Swiss-precision aesthetic:
+
+- **No 1px borders.** Sectioning is done through tonal background shifts, never outlines.
+- **Tonal layering for depth** — white cards float on off-white surfaces, with ambient diffused shadows only on interactive floating elements.
+- **Extreme typographic hierarchy** — Inter variable font, tight letter-spacing on displays, uppercase label-sm metadata for a premium feel.
+- **Glassmorphism** on floating nav and modals.
+- **Generous whitespace** — `spacing-16` / `spacing-20` between major sections so the product feels expensive and uncluttered.
+
+The whole system is documented in a dedicated `DESIGN.md` so the product stays consistent as it grows.
+
+## Tech stack
+
+<TagList>
+  <TagListItem>Frontend — Next.js 16 (App Router), Tailwind, Framer Motion</TagListItem>
+  <TagListItem>Backend — FastAPI + Python 3.12</TagListItem>
+  <TagListItem>Database — MongoDB Atlas</TagListItem>
+  <TagListItem>Vector DB — Qdrant (compliance chat)</TagListItem>
+  <TagListItem>AI — OpenRouter → Gemini 2.5 Flash, Pydantic AI</TagListItem>
+  <TagListItem>Voice — ElevenLabs STT + TTS (WebSocket)</TagListItem>
+  <TagListItem>Auth — Auth.js v5 (Google, LinkedIn, magic link)</TagListItem>
+  <TagListItem>Storage — Google Drive API (user-owned)</TagListItem>
+  <TagListItem>Payments — Stripe + webhooks</TagListItem>
+  <TagListItem>Email — Resend</TagListItem>
+  <TagListItem>Deployment — Docker Compose + Dokploy on VPS</TagListItem>
+</TagList>
+
+## Site link
+
+<TagList>
+  <TagListItemLink link={"https://teletavox.com"}>teletavox.com</TagListItemLink>
+</TagList>

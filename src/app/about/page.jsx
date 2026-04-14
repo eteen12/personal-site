@@ -26,9 +26,9 @@ function Culture() {
               height="100%"
               src="https://youtube.com/embed/SG56rD00SE4?si=D9EX9FXOSzc8xnVC"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
           </GridListItem>
@@ -38,9 +38,9 @@ function Culture() {
               height="100%"
               src="https://youtube.com/embed/2cVASY-3qSc?si=PKxwjP04WPfzWepv"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
           </GridListItem>
@@ -50,9 +50,9 @@ function Culture() {
               height="100%"
               src="https://www.youtube.com/embed/9zMkGybI9tw"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
           </GridListItem>
@@ -73,32 +73,16 @@ function Culture() {
 }
 
 export const metadata = {
-  title: 'About Ethan Breitkreutz',
+  title: 'About Ethan Breitkreutz — Kelowna Tech Solutions',
   description:
-    'About Ethan Breitkreutz, the Canadian web developer, student, and programmer',
-  schema: [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'person',
-      name: 'Ethan Breitkreutz',
-      url: 'https://teletadevelopment.com',
-      logo: 'https://teletadevelopment.com/teletaLogo.png',
-      sameAs: [
-        'https://www.instagram.com/ethan_breitkreutz/',
-        'https://www.linkedin.com/in/ethan-breitkreutz/',
-        'https://www.youtube.com/@Ethan-Breitkreutz',
-        'https://x.com/12Eteen',
-        'https://github.com/eteen12',
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        email: 'ethan@ethanbdev.com',
-        contactType: 'Customer Service',
-        areaServed: 'CA',
-        availableLanguage: 'English',
-      },
-    },
-  ],
+    'Ethan Breitkreutz is a tech solutions provider based in Kelowna, BC. Custom websites, web apps, and AI automation for businesses across the Okanagan and Canada.',
+  openGraph: {
+    title: 'About Ethan Breitkreutz — Kelowna Tech Solutions',
+    description:
+      'Tech solutions provider based in Kelowna, BC. Websites, web apps, and AI automation for Okanagan businesses.',
+    url: 'https://ethanbdev.com/about',
+    images: [{ url: '/about/ethan2.webp', width: 800, height: 600, alt: 'Ethan Breitkreutz' }],
+  },
 }
 
 export default async function About() {

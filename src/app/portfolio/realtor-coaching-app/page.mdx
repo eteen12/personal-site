@@ -1,0 +1,62 @@
+import logo from '/public/logos/realtor-coaching-logo.png'
+import dashboard from './dashboard.png'
+import { TagListItemLink } from '@/components/TagList'
+
+export const caseStudy = {
+  client: 'Realtor Coaching App',
+  title: 'Realtor Coaching App',
+  description:
+    'A custom team competition tracker built for a realtor coaching program. Members log activities, team leaders manage their teams, and the head coach runs locations and weekly leaderboards from one central dashboard.',
+  summary: [
+    'A purpose-built web app that replaced scattered spreadsheets and group chats with a single tool for running team-based coaching competitions. Members log their activities, points roll up into weekly team standings, and the head coach controls locations, teams, and the big weekly reveal from one dashboard.',
+  ],
+  logo,
+
+  date: '2025-11',
+  service: 'Web app development',
+  site: '',
+  previewImage: dashboard,
+}
+
+export const metadata = {
+  title: `${caseStudy.client} portfolio project`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+The Realtor Coaching App is a custom tech solution built for a realtor coaching program that runs team-based competitions across multiple locations. Before this app, the program relied on spreadsheets, manual point tallying, and group chats — which made it hard to track activity accurately, compare teams fairly, or keep members engaged week over week.
+
+I designed and built a full-stack web application that handles the entire coaching workflow in one place. No public signups, no passwords to reset — members join with a simple access code handed out by their coach, and the app drops them straight into the dashboard for their role.
+
+## What the app does
+
+The app supports three distinct roles, each with its own dashboard and permissions:
+
+- **Members** log their weekly activities — things like client meetings, new contacts, and completed transactions — and watch their points contribute to their team's standing in real time.
+- **Team Leaders** have everything members have, plus visibility into their team's combined activity and weekly performance.
+- **The Head Coach** runs the entire program: creating locations (sessions), building teams, assigning members and leaders, advancing weeks, and revealing results with a built-in "big reveal" moment to keep the competitive energy high.
+
+Each activity is logged with a date, context (like an address or partner name), and a point value. Points are automatically grouped by week and team, so the leaderboard is always accurate without anyone having to tally anything by hand.
+
+## Why it matters for the client
+
+This wasn't a template — it was built around exactly how the coaching program actually runs. That means:
+
+- **Access-code login** keeps it frictionless for members who aren't tech-savvy.
+- **Role-based dashboards** mean nobody sees more than they should, and the coach stays in control.
+- **Weekly leaderboards with a results-reveal flow** turn a spreadsheet into an event members look forward to.
+- **Multi-location support** lets the program scale to new cities without spinning up a new tool each time.
+
+It's a good example of the kind of tech solution I build for businesses that have outgrown their current process — a real app that fits a real workflow, not a generic SaaS product bolted on top.
+
+## What was done?
+
+<TagList>
+  <TagListItem>Frontend (Next.js App Router)</TagListItem>
+  <TagListItem>Styling (Tailwind CSS)</TagListItem>
+  <TagListItem>Backend (Firebase Firestore)</TagListItem>
+  <TagListItem>Access-code auth & role-based dashboards</TagListItem>
+  <TagListItem>Activity logging & weekly leaderboards</TagListItem>
+  <TagListItem>Coach admin tools (locations, teams, results reveal)</TagListItem>
+</TagList>

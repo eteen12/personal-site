@@ -1,0 +1,75 @@
+import logo from '/public/logos/curbchat-logo.png'
+import { TagListItemLink } from '@/components/TagList'
+
+export const caseStudy = {
+  client: 'CurbChat',
+  title: 'CurbChat — AI Chatbot SaaS',
+  description:
+    'A full-stack AI chatbot SaaS I built and launched in four days. Any small business can paste in their website URL and get a custom-trained, custom-styled AI chatbot embedded on their site in about 60 seconds.',
+  summary: [
+    "CurbChat turns any business website into an AI chatbot in about 60 seconds. Paste a URL, the app scrapes the site, auto-generates a trained system prompt and matching visual style, and hands back a one-line embed script. Built end-to-end in four days with Next.js, Supabase, Stripe, and a DeepSeek-powered AI layer — plus an automated outreach and blog pipeline running behind the scenes.",
+  ],
+  logo,
+
+  date: '2026-04',
+  service: 'Full-stack SaaS development',
+  site: 'https://curbchat.ca',
+}
+
+export const metadata = {
+  title: `${caseStudy.client} portfolio project`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+CurbChat is a full-stack AI chatbot SaaS that I designed, built, and launched in four days. It lets any small business embed a fully customized AI chatbot on their website without writing prompts, tweaking designs, or touching code.
+
+A business owner pastes in their website URL, CurbChat scrapes the site, auto-generates a system prompt trained on their actual content, and pulls styling cues (colours, fonts, branding) directly from the page. The result is a chatbot that sounds like their business and looks like their brand — delivered as a single `<script>` tag they can drop into Squarespace, Webflow, WordPress, or plain HTML.
+
+## What it does
+
+### For the customer
+
+- **Instant onboarding** — paste a website URL and CurbChat generates a trained prompt and visual style automatically.
+- **Prompt & style editor** — tweak the AI's personality, responses, and chatbot appearance from a clean dashboard.
+- **One-line embed** — a single script tag puts the chatbot on any site, no framework required.
+- **Lead capture** — the chatbot collects visitor contact info during conversations via a web3forms integration.
+- **Analytics** — conversation counts, leads captured, and usage trends over time.
+- **Stripe billing** — full subscription management with promo code support.
+- **Magic-link auth** — no passwords, just an email.
+
+### Under the hood
+
+Every user gets a unique, rotatable API key scoped to their account. The embedded chatbot widget authenticates against that key on every request — no key, no chatbot. Customer data, prompt config, styling, and analytics all sit behind auth middleware, while the public chat endpoints are key-gated.
+
+### Automated outreach pipeline
+
+CurbChat also ships with a private admin pipeline for sales outreach:
+
+1. A demo-generation API takes any business URL, scrapes it, and spins up a live personalized chatbot demo with a shareable link that expires in 14 days.
+2. A custom OpenClaw AI agent skill searches Google Places for businesses by city and industry, generates a live demo for each, and sends a personalized cold email with the demo link attached.
+
+The whole flow — from "find HVAC businesses in Kelowna" to "cold email sent with a working branded demo" — runs from a single command.
+
+### Automated blog pipeline
+
+The marketing blog is fully automated. Blog posts live in Supabase and render via a markdown-backed `/blog` route with incremental static regeneration. A private REST API lets n8n workflows AI-generate full SEO-targeted articles and publish them on a schedule. Every publish or update triggers `revalidatePath`, so posts go live within seconds — no commits, no rebuilds, no redeploys.
+
+## Tech stack
+
+<TagList>
+  <TagListItem>Next.js (App Router) + TypeScript</TagListItem>
+  <TagListItem>Supabase (Postgres + auth)</TagListItem>
+  <TagListItem>Stripe subscriptions</TagListItem>
+  <TagListItem>DeepSeek LLM</TagListItem>
+  <TagListItem>Python scraping layer</TagListItem>
+  <TagListItem>n8n automation workflows</TagListItem>
+  <TagListItem>Vercel deployment</TagListItem>
+</TagList>
+
+## Site link
+
+<TagList>
+  <TagListItemLink link={"https://curbchat.ca"}>curbchat.ca</TagListItemLink>
+</TagList>

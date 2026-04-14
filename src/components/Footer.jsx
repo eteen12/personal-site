@@ -36,8 +36,9 @@ const navigation = [
     links: [
       { title: 'About me', href: '/about' },
       { title: 'My portfolio', href: '/portfolio' },
+      { title: 'Blog', href: '/blog' },
       { title: 'Contact', href: '/contact' },
-      { title: 'Home', href: '/home' },
+      { title: 'Home', href: '/' },
     ],
   },
   {
@@ -134,6 +135,27 @@ export function Footer() {
           <div className="flex lg:justify-end">
             <NewsletterForm />
           </div>
+        </div>
+        <div className="mt-16 flex flex-col items-start gap-4 rounded-3xl bg-neutral-950 p-8 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+              Built by me
+            </p>
+            <p className="mt-2 font-display text-lg font-semibold text-white">
+              Need a chatbot for your business?
+            </p>
+            <p className="mt-1 text-sm text-neutral-400">
+              Visit CurbChat — my AI chatbot platform for local businesses.
+            </p>
+          </div>
+          <a
+            href="https://curbchat.ca"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200"
+          >
+            Visit curbchat.ca →
+          </a>
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
