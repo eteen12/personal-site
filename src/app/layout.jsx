@@ -1,3 +1,5 @@
+import Script from 'next/script'
+
 import { RootLayout } from '../components/RootLayout'
 
 import '@/styles/tailwind.css'
@@ -88,6 +90,10 @@ export default function Layout({ children }) {
       </head>
       <body className="flex min-h-full flex-col">
         <RootLayout>{children}</RootLayout>
+        <Script
+          src="https://curbchat.ca/embed.js?apiKey=15c71e5d-5974-4b00-9291-168b84b0dcd6"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
