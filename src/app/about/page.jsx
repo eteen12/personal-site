@@ -92,8 +92,8 @@ export default async function About() {
         <div className="">
           <PageIntro eyebrow="About me" title="About Ethan Breitkreutz">
             <p className="underline">
-              Ethan Breitkreutz is a Canadian web developer, student, and
-              programmer.
+              Ethan Breitkreutz is a Canadian software developer and student at
+              UBC.
             </p>
             <div className="mt-10 max-w-2xl space-y-6">
               <p>
