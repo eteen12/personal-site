@@ -45,7 +45,9 @@
     margin-bottom: 32px;
   }
 
-  .logos { display: flex; gap: 8px; margin-bottom: 24px; }
+  .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+  .top h1 { margin-bottom: 0; }
+  .logos { display: flex; gap: 8px; }
   .logos img { width: 24px; height: 24px; border-radius: 6px; display: block; box-shadow: 0 0 0 1px rgba(0,0,0,.06); }
 
   p { margin-bottom: 18px; }
@@ -145,13 +147,15 @@
 </head>
 <body>
 <main>
-  <div class="logos fade">
+  <header class="top fade">
+  <h1>Ethan Breitkreutz</h1>
+  <div class="logos">
     <img src="logos/ubc.png" alt="UBC" title="UBC">
     <img src="logos/north-group.png" alt="North Group" title="North Group">
     <img src="logos/beam.png" alt="" title="">
     <img src="logos/teleta.png" alt="Teleta" title="Teleta">
   </div>
-  <h1 class="fade">Ethan Breitkreutz</h1>
+  </header>
 
   <div class="fade">
     <p>I'm an engineer from Canada.</p>
