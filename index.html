@@ -48,6 +48,8 @@
   .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
   .top h1 { margin-bottom: 0; }
   .logos { display: flex; gap: 8px; }
+  .logos a { display: block; text-decoration: none; transition: opacity var(--slow) var(--ease); }
+  .logos a:hover { opacity: .7; }
   .logos img { width: 24px; height: 24px; border-radius: 6px; display: block; box-shadow: 0 0 0 1px rgba(0,0,0,.06); }
 
   p { margin-bottom: 18px; }
@@ -150,10 +152,10 @@
   <header class="top fade">
   <h1>Ethan Breitkreutz</h1>
   <div class="logos">
-    <img src="logos/ubc.png" alt="UBC" title="UBC">
-    <img src="logos/north-group.png" alt="North Group" title="North Group">
-    <img src="logos/teleta.png" alt="Teleta" title="Teleta">
-    <img src="logos/beam.png" alt="CurbChat" title="CurbChat">
+    <a href="https://www.ubc.ca" target="_blank" rel="noopener"><img src="logos/ubc.png" alt="UBC" title="UBC"></a>
+    <a href="https://www.linkedin.com/company/north-group-ai/" target="_blank" rel="noopener"><img src="logos/north-group.png" alt="North Group" title="North Group"></a>
+    <a href="https://teletavox.com" target="_blank" rel="noopener"><img src="logos/teleta.png" alt="Teleta" title="Teleta"></a>
+    <a href="https://curbchat.ca" target="_blank" rel="noopener"><img src="logos/beam.png" alt="CurbChat" title="CurbChat"></a>
   </div>
   </header>
 
