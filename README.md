@@ -1,3 +1,3 @@
-# Freelance Webdev site
+# personal-site
 
-This is a website using a tailwind template for my freelance website, not much to it
+ethanbdev.com. One static page, no build step.

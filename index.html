@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ethan Breitkreutz</title>
+<meta name="description" content="Ethan Breitkreutz. Engineer from Canada, AI engineer at North Group.">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4efe6;
+    --ink: #1f1d1a;
+    --muted: #6f6a62;
+    --line: #ddd6ca;
+    --ease: cubic-bezier(.22, 1, .36, 1);
+    --slow: 650ms;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); scroll-behavior: smooth; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: var(--ink); color: var(--bg); }
+
+  main {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 96px 24px 120px;
+  }
+
+  h1 {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    margin-bottom: 32px;
+  }
+
+  p { margin-bottom: 18px; }
+  .muted { color: var(--muted); }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--muted);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: text-decoration-color var(--slow) var(--ease);
+  }
+  a:hover { text-decoration-color: var(--ink); }
+
+  section { margin-top: 48px; }
+  h2 {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: .02em;
+    margin-bottom: 12px;
+  }
+
+  /* dropdowns */
+  .item { border-top: 1px solid var(--line); }
+  .item:last-child { border-bottom: 1px solid var(--line); }
+  .toggle {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    font-size: 15px;
+  }
+  .toggle:focus-visible { outline: 1px solid var(--muted); outline-offset: 4px; }
+  .icon {
+    width: 10px; height: 10px; position: relative; flex-shrink: 0;
+  }
+  .icon::before, .icon::after {
+    content: ""; position: absolute; left: 0; top: 50%;
+    width: 10px; height: 1px; background: var(--ink);
+    transition: transform var(--slow) var(--ease);
+  }
+  .icon::after { transform: rotate(90deg); }
+  .item.open .icon::after { transform: rotate(0deg); }
+
+  .panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--slow) var(--ease);
+  }
+  .item.open .panel { grid-template-rows: 1fr; }
+  .panel > div {
+    overflow: hidden;
+  }
+  .panel-inner {
+    padding-bottom: 16px;
+    color: var(--muted);
+    font-size: 15px;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity var(--slow) var(--ease), transform var(--slow) var(--ease);
+  }
+  .item.open .panel-inner { opacity: 1; transform: none; transition-delay: 80ms; }
+
+  footer { margin-top: 64px; font-size: 14px; color: var(--muted); }
+  footer { display: flex; gap: 20px; align-items: center; }
+  footer a { display: inline-flex; color: var(--ink); opacity: .55; text-decoration: none; transition: opacity var(--slow) var(--ease); }
+  footer a:hover { opacity: 1; }
+  footer svg { width: 18px; height: 18px; display: block; }
+  #toast {
+    position: fixed; left: 50%; bottom: 32px; transform: translate(-50%, 8px);
+    background: var(--ink); color: var(--bg); font-size: 13px; padding: 8px 14px; border-radius: 999px;
+    opacity: 0; pointer-events: none;
+    transition: opacity var(--slow) var(--ease), transform var(--slow) var(--ease);
+  }
+  #toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  /* gentle fade-in on load */
+  .fade { opacity: 0; transform: translateY(6px); animation: in 900ms var(--ease) forwards; }
+  .fade:nth-child(2) { animation-delay: 60ms; }
+  .fade:nth-child(3) { animation-delay: 120ms; }
+  .fade:nth-child(4) { animation-delay: 180ms; }
+  .fade:nth-child(5) { animation-delay: 240ms; }
+  .fade:nth-child(6) { animation-delay: 300ms; }
+  @keyframes in { to { opacity: 1; transform: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+    .fade { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1 class="fade">Ethan Breitkreutz</h1>
+
+  <div class="fade">
+    <p>I'm an engineer from Canada.</p>
+    <p>Right now I'm working at <a href="https://www.linkedin.com/company/north-group-ai/" target="_blank" rel="noopener">North Group</a> as an AI engineer, traveling to different technology events, and working on side projects.</p>
+  </div>
+
+  <div class="fade">
+    <p class="muted">Before this, I co-founded a company and led an engineering team of three, building software for real estate. <a href="https://teletavox.com" target="_blank" rel="noopener">The product</a> eventually failed, but I kept a lot of the learnings.</p>
+    <p class="muted">I've also built a handful of small tools that businesses still use today. I also sold a product called <a href="https://curbchat.ca" target="_blank" rel="noopener">CurbChat</a>.</p>
+  </div>
+
+  <section class="fade">
+    <h2>Work</h2>
+    <div class="item">
+      <button class="toggle" aria-expanded="false">North Group <span class="icon"></span></button>
+      <div class="panel"><div><div class="panel-inner">AI engineer. First engineering hire. I build data ontologies that turn messy, unstructured client data into something queryable, exposed through Claude MCP servers and dashboards that show clear insights on spending, revenue and more. I've also built AI lead review systems, quoting systems built on historical data, and general data layers for clients.</div></div></div>
+    </div>
+    <div class="item">
+      <button class="toggle" aria-expanded="false">Teleta <span class="icon"></span></button>
+      <div class="panel"><div><div class="panel-inner">Co-founder. AI voice CRM, started at the MIT global hackathon. Led a team of three. We wound it down after losing a brokerage deal. We'd already pulled out of the consumer side, so there wasn't anything to go back to.</div></div></div>
+    </div>
+    <div class="item">
+      <button class="toggle" aria-expanded="false">CurbChat <span class="icon"></span></button>
+      <div class="panel"><div><div class="panel-inner">An AI chatbot for small businesses. Sold in 2026.</div></div></div>
+    </div>
+  </section>
+
+  <section class="fade">
+    <h2>Projects</h2>
+    <div class="item">
+      <button class="toggle" aria-expanded="false">Satpack <span class="icon"></span></button>
+      <div class="panel"><div><div class="panel-inner">A marketplace where AI agents hire other agents and pay per task in sats over Lightning. Built on L402 and Spiral's Money Dev Kit, and exposed over MCP so an agent can browse, hire and pay with no human involved. Built at the Spiral × MIT Hack-Nation hackathon. <a href="https://github.com/eteen12/satpack" target="_blank" rel="noopener">GitHub</a></div></div></div>
+    </div>
+    <div class="item">
+      <button class="toggle" aria-expanded="false">Secrets <span class="icon"></span></button>
+      <div class="panel"><div><div class="panel-inner">Things I can't tell you.</div></div></div>
+    </div>
+  </section>
+
+  <section class="fade">
+    <h2>Open source</h2>
+    <div class="item">
+      <button class="toggle" aria-expanded="false">Anchor <span class="icon"></span></button>
+      <div class="panel"><div><div class="panel-inner">Solana's smart contract framework. I've had a good chunk of PRs merged here.</div></div></div>
+    </div>
+    <div class="item">
+      <button class="toggle" aria-expanded="false">Surfpool <span class="icon"></span></button>
+      <div class="panel"><div><div class="panel-inner">Local Solana network for development. Merged contributions.</div></div></div>
+    </div>
+    <div class="item">
+      <button class="toggle" aria-expanded="false">Token Tracker <span class="icon"></span></button>
+      <div class="panel"><div><div class="panel-inner">Ported the macOS app to Linux, among other contributions.</div></div></div>
+    </div>
+    <div class="item">
+      <button class="toggle" aria-expanded="false">Clean Your TV <span class="icon"></span></button>
+      <div class="panel"><div><div class="panel-inner">Built my own fully reversible Fire TV Stick cleanup, with a custom home screen that sits over Amazon's launcher. It's featured in the <a href="https://github.com/Gathin23/cleanyourtv" target="_blank" rel="noopener">Clean Your TV</a> repo.</div></div></div>
+    </div>
+  </section>
+
+  <footer class="fade">
+    <a href="https://github.com/eteen12" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+    <a href="https://www.linkedin.com/in/ethan-breitkreutz" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+    <a href="https://www.instagram.com/ebreitk.dev/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor" stroke="none"/></svg></a>
+    <a href="https://x.com/ebreitk" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+    <a href="#" id="mail" data-u="ethanbreitkreutz07" data-d="gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></svg></a>
+    <span id="year" style="margin-left:auto;font-size:13px;color:var(--muted)">2026</span>
+  </footer>
+</main>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // dropdowns
+  document.querySelectorAll('.toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+
+  // email: assembled on click so scrapers don't see it in the page
+  (() => {
+    const a = document.getElementById('mail');
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    document.body.appendChild(toast);
+    let t;
+    a.addEventListener('click', async e => {
+      e.preventDefault();
+      const addr = a.dataset.u + '@' + a.dataset.d;
+      let msg = 'Email copied';
+      try { await navigator.clipboard.writeText(addr); } catch { msg = addr; }
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(t);
+      t = setTimeout(() => toast.classList.remove('show'), 2200);
+    });
+  })();
+
+  // smooth wheel scrolling (desktop mouse only)
+  (() => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (matchMedia('(pointer: coarse)').matches) return;
+    let target = window.scrollY, current = window.scrollY, running = false;
+    const max = () => document.documentElement.scrollHeight - innerHeight;
+    function step() {
+      current += (target - current) * 0.09;
+      if (Math.abs(target - current) < 0.5) { current = target; running = false; }
+      window.scrollTo(0, current);
+      if (running) requestAnimationFrame(step);
+    }
+    addEventListener('wheel', e => {
+      if (e.ctrlKey) return;
+      e.preventDefault();
+      if (!running) { target = current = window.scrollY; }
+      target = Math.max(0, Math.min(max(), target + e.deltaY));
+      if (!running) { running = true; requestAnimationFrame(step); }
+    }, { passive: false });
+    addEventListener('scroll', () => { if (!running) target = current = window.scrollY; });
+  })();
+</script>
+</body>
+</html>
